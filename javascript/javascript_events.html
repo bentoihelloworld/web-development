@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <button onclick="this.innerHTML=Date()">The time is?</button>
+    <br>
+    <br>
+    <button onclick="sendGreetings()">Send Greetings</button>
+    <h2 id="greet"></h2>
+    <script>
+        function sendGreetings() {
+            document.getElementById("greet").innerHTML = "Hello from the otherside of the world!";
+        }
+    </script>
+
+</body>
+
+</html>
