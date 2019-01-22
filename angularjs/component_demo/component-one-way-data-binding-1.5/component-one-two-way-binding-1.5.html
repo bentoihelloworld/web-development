@@ -1,0 +1,34 @@
+<html>
+
+<head>
+    <script src="angular.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="css.css">
+</head>
+<div ng-app="app">
+    <!--add alias for the the controller e.g. parent-->
+    <div ng-controller="ParentController as parent ">
+        <h3>
+            Component data-binding
+        </h3>
+        <div class="section">
+            <h4>
+                Parent
+            </h4>
+            <p>
+                Object: {{parent.someObject }}
+            </p>
+
+            <a href="" ng-click="parent.updateValues();">
+                Change Parent Values
+            </a>
+        </div>
+
+<!--object reference from the parent controller-->
+     <!-- <example obj="parent.someObject"></example>-->
+
+      <example obj="parent.someObject"></example>
+    </div>
+</div>
+
+</html>

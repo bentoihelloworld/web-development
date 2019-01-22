@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<script src="../angular.js"></script>
+<style>
+    .hasError {
+        background-color: slateblue;
+        color: white;
+        width: 200px;
+
+    }
+
+    .hasError2 {
+        background-color: turquoise;
+        color: white;
+        width: 200px;
+    }
+</style>
+
+<body ng-app>
+
+    <p>Try writing in the input field:</p>
+
+    <form name="myForm">
+        <table>
+            <tr>
+                <td> Username:</td>
+                <td>
+                    <div ng-class="{ 'hasError' : myForm.username.$invalid && !myForm.username.$pristine }">
+                        <input type="text" name="username" ng-model="username" required> <br>
+                        <p ng-show="myForm.username.$invalid && !myForm.username.$pristine">Username is required.</p>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td> Password:</td>
+                <td>
+                    <div ng-class="{ 'hasError2' : myForm.password.$invalid && !myForm.password.$pristine }">
+                        <input type="password" name="password" ng-model="password" required>
+                        <p ng-show="myForm.password.$invalid && !myForm.password.$pristine">Password is required.</p>
+                    </div>
+                </td>
+            </tr>
+        </table>
+
+    </form>
+
+    <p>The input's valid state is:</p>
+    <h1>{{myForm.$valid}}</h1>
+    <button type="submit" ng-disabled="myForm.$invalid">Submit</button>
+</body>
+
+</html>

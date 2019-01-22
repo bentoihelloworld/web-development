@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>JavaScript Variables</h2>
+
+
+    <p id="variable"></p>
+    <p id="number"></p>
+    <p id="decimal"></p>
+    <p id="string"></p>
+    <p id="array"></p>
+    <p id="object"></p>
+
+    <script>
+
+        var x, y;
+        x = 5; y = 6;
+        z = x + y;
+
+
+        var no = 6;
+        var dec = 10.50;
+        var str = "hello String";
+        var arr = ["Saab", "Volvo", "BMW"];
+        var obj = {
+            firstName: "John",
+            lastName: "Doe",
+            age: 50,
+            eyeColor: "blue"
+        };
+
+        document.getElementById("variable").innerHTML = "variable z result: " + z;
+        document.getElementById("number").innerHTML = no;
+        document.getElementById("decimal").innerHTML = dec;
+        document.getElementById("string").innerHTML = str;
+        document.getElementById("array").innerHTML = arr;
+        document.getElementById("object").innerHTML = obj.firstName + " is " + obj.age + " years old.";
+
+    </script>
+
+</body>
+
+</html>
