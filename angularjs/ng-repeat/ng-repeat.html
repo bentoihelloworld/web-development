@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+<head>
+    <script src="../angular.js"></script>
+    <script src="ng-repeat.js"></script>
+    <style>
+        body {
+            background-color: lightblue;
+        }
+
+        table,
+        td {
+            border: red 1px solid;
+        }
+
+        tr:hover {
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body ng-controller="PhoneListController">
+    <h1>Unordered list</h1>
+    <ul ng-repeat="phone in phones">
+        <span>{{phone.name | uppercase}}</span>
+        <li>{{phone.snippet}}</li>
+    </ul>
+
+    <hr>
+    <h1>Table</h1>
+    <table>
+        <tr ng-repeat="phone in phones">
+            <td>{{phone.name}}</td>
+            <td>{{phone.snippet}}</td>
+        </tr>
+    </table>
+
+</body>
+
+</html>

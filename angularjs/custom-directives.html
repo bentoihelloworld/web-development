@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+<head>
+    <script src="angular.js"></script>
+
+    <script>
+        var  app = angular.module("myApp", []);
+        app.directive('customDirective', function(){
+
+            return {restrict: "EAC",
+                    template: "<h2>This is a custom directive</h2>"
+                };
+        });
+
+    </script>
+</head>
+
+<body>
+
+    <div custom-directive></div>
+    <custom-directive></custom-directive>
+    <div class="custom-directive"></div>
+
+</body>
+
+</html>

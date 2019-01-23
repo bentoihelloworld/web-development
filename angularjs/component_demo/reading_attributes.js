@@ -9,6 +9,6 @@
       },
     
       // We can now access the data from the data attribute with `$ctrl`
-      template:'<p>{{ $ctrl.data }}</p>'
+      template:'<h1>{{ $ctrl.data }}</h1>'
     });
 })();

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+<head>
+    <script src="../angular.js"></script>
+    <!-- <script src="deferred-api.js"></script> -->
+    <script src="promise-api.js"></script>
+</head>
+
+<body>
+    <div ng-controller="MainCtrl">
+        <h1>Response from the server: {{response.name}}</h1>
+        <img ng-src="{{response.avatar_url}}">
+    </div>
+
+</body>
+
+</html>

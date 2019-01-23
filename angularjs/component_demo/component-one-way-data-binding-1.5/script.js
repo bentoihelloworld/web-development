@@ -1,7 +1,7 @@
 //1. create a function for component 
 var example = {
     bindings: {
-        obj: '=' //2 way binding
+        obj: '' //2 way binding
     },
     //create a template to access the controller object using default $ctrl
     template: `

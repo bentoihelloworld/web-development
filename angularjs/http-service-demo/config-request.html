@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+<head>
+    <script src="../angular.js"></script>
+    <script src="config-request.js"></script>
+    <style>
+            table {
+              border-collapse: collapse;
+              width: 100%;
+            }
+        
+            th,
+            td {
+              text-align: left;
+              padding: 8px;
+            }
+        
+            tr:nth-child(even) {
+              background-color: #f2f2f2
+            }
+        
+            th {
+              background-color: #4CAF50;
+              color: white;
+            }
+          </style>
+</head>
+
+<body ng-controller="httpConfigController">
+    <div>{{error}}</div>
+
+
+
+    <table>
+        <tr>
+            <th>EnterpriseId</th>
+            <th>FirstName</th>
+            <th>Position</th>
+        </tr>
+        <tr ng-repeat="u in user">
+            <td>{{u.enterpriseId}}</td>
+            <td>{{u.firstName}}</td>
+            <td>{{u.position}}</td>
+        </tr>
+    </table>
+
+    <form name="consumer" ng-submit="post(payload)">
+            <table>
+                <tr>
+                    <td>
+                        <input type="submit" value="Submit">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <textarea required placeholder="Input payload" ng-model="payload" rows="6" cols="50" />
+                        </td>
+                      </tr>
+                    </table>
+             </form>
+
+</body>
+
+</html>
