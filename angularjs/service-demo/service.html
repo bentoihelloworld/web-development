@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html ng-app="mainApp">
+
+<head>
+    <script src="../angular.js"></script>
+    <script src="service.js"></script>
+
+    <style>
+        .isEnabled {
+          background-color:blue;
+ 
+          color: white;
+          padding: 15px 32px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+          margin: 4px 2px;
+          cursor: pointer;
+        }
+
+        button {
+          background-color:red;
+          border: 1px red;
+          color: white;
+          padding: 15px 32px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+          margin: 4px 2px;
+          cursor: pointer;
+        }
+
+
+    input[type=number] {
+  width: 200px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 1px solid red;
+
+}
+
+input.ng-invalid{
+      background-color:pink;
+  }
+
+input.ng-valid{
+      background-color:greenyellow;
+  }
+        </style>
+</head>
+
+<body>
+    <div ng-controller="CaculatorController">
+        <form name="myForm">
+            <p>Enter a number: </p>
+            <input type="number" name="no" ng-model="number" required />
+            <button ng-click="square()" ng-class="{'isEnabled': myForm.no.$valid}" ng-disabled="myForm.$invalid" >Calculate</button>
+            <h1>Result: <div style="background-color:skyblue; width:50px;padding: 20px 20px 20px 20px">{{result}}</div>
+            </h1>
+        </form>
+
+    </div>
+
+</body>
+
+</html>
